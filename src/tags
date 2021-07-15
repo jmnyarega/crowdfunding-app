@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/ssd1/projects/TIL/fem/crowdfunding/src/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+.button	css/_button.scss	/^.button {$/;"	c
+.button:focus	css/_button.scss	/^.button:focus {$/;"	c
+.button:hover	css/_button.scss	/^.button:hover,$/;"	c
+.container	css/global.scss	/^.container {$/;"	c
+.input	css/_input.scss	/^.input {$/;"	c
+.sr-only	css/_resets.scss	/^.sr-only {$/;"	c
+breakpoints	css/_functions.scss	/^$breakpoints: ($/;"	v
+large	css/_functions.scss	/^  large: 61.25em,$/;"	v
+medium	css/_functions.scss	/^  medium: 60em,$/;"	v
+ns1a5756130101	assets/icon-close-menu.svg	/^<svg width="14" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="#FFF" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+ns73a2ebcb0101	assets/icon-close-modal.svg	/^<svg width="15" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><path d="M11.314 0l2.828 2.82/;"	n	uri:http://www.w3.org/2000/svg
+nsb2dc2c160101	assets/logo.svg	/^<svg width="128" height="20" xmlns="http:\/\/www.w3.org\/2000\/svg"><path d="M7.272 20c2.69 0 5./;"	n	uri:http://www.w3.org/2000/svg
+nsbd11e2d90101	assets/icon-check.svg	/^<svg width="64" height="64" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+nscf710bf80101	assets/icon-hamburger.svg	/^<svg width="16" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="#FFF" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+nsd7dcb0310101	assets/icon-bookmark.svg	/^<svg width="56" height="56" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+nsfc03715f0101	assets/logo-mastercraft.svg	/^<svg width="56" height="56" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+router	router/index.js	/^const router = new VueRouter({$/;"	C
+routes	router/index.js	/^const routes = [$/;"	C
+small	css/_functions.scss	/^  small: 40em,$/;"	v

@@ -1,0 +1,113 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/ssd1/projects/TIL/fem/crowdfunding/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+*.{js,jsx,vue}	package.json	/^    "*.{js,jsx,vue}": [$/;"	a	object:lint-staged
+.button	src/css/_button.scss	/^.button {$/;"	c
+.button:focus	src/css/_button.scss	/^.button:focus {$/;"	c
+.button:hover	src/css/_button.scss	/^.button:hover,$/;"	c
+.container	src/css/global.scss	/^.container {$/;"	c
+.input	src/css/_input.scss	/^.input {$/;"	c
+.sr-only	src/css/_resets.scss	/^.sr-only {$/;"	c
+0	package.json	/^          "**\/__tests__\/*.{j,t}s?(x)",$/;"	s	array:eslintConfig.overrides.0.files
+0	package.json	/^      "plugin:vue\/essential",$/;"	s	array:eslintConfig.extends
+0	package.json	/^      "vue-cli-service lint",$/;"	s	array:lint-staged.*.{js,jsx,vue}
+0	package.json	/^      {$/;"	o	array:eslintConfig.overrides
+0	package.json	/^    "> 1%",$/;"	s	array:browserslist
+1	package.json	/^          "**\/tests\/unit\/**\/*.spec.{j,t}s?(x)"$/;"	s	array:eslintConfig.overrides.0.files
+1	package.json	/^      "@vue\/airbnb"$/;"	s	array:eslintConfig.extends
+1	package.json	/^      "git add"$/;"	s	array:lint-staged.*.{js,jsx,vue}
+1	package.json	/^    "last 2 versions",$/;"	s	array:browserslist
+2	package.json	/^    "not dead"$/;"	s	array:browserslist
+@vue/cli-plugin-babel	package.json	/^    "@vue\/cli-plugin-babel": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-e2e-cypress	package.json	/^    "@vue\/cli-plugin-e2e-cypress": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-eslint	package.json	/^    "@vue\/cli-plugin-eslint": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-pwa	package.json	/^    "@vue\/cli-plugin-pwa": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-router	package.json	/^    "@vue\/cli-plugin-router": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-unit-jest	package.json	/^    "@vue\/cli-plugin-unit-jest": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-plugin-vuex	package.json	/^    "@vue\/cli-plugin-vuex": "~4.5.0",$/;"	s	object:devDependencies
+@vue/cli-service	package.json	/^    "@vue\/cli-service": "~4.5.0",$/;"	s	object:devDependencies
+@vue/eslint-config-airbnb	package.json	/^    "@vue\/eslint-config-airbnb": "^5.0.2",$/;"	s	object:devDependencies
+@vue/test-utils	package.json	/^    "@vue\/test-utils": "^1.0.3",$/;"	s	object:devDependencies
+Compiles and hot-reloads for development	README.md	/^### Compiles and hot-reloads for development$/;"	S	section:crowdfunding""Project setup
+Compiles and minifies for production	README.md	/^### Compiles and minifies for production$/;"	S	section:crowdfunding""Project setup
+Customize configuration	README.md	/^### Customize configuration$/;"	S	section:crowdfunding""Project setup
+Lints and fixes files	README.md	/^### Lints and fixes files$/;"	S	section:crowdfunding""Project setup
+Project setup	README.md	/^## Project setup$/;"	s	chapter:crowdfunding
+Run your end-to-end tests	README.md	/^### Run your end-to-end tests$/;"	S	section:crowdfunding""Project setup
+Run your unit tests	README.md	/^### Run your unit tests$/;"	S	section:crowdfunding""Project setup
+app	public/index.html	/^    <div id="app"><\/div>$/;"	I
+babel-eslint	package.json	/^    "babel-eslint": "^10.1.0",$/;"	s	object:devDependencies
+breakpoints	src/css/_functions.scss	/^$breakpoints: ($/;"	v
+browserslist	package.json	/^  "browserslist": [$/;"	a
+build	package.json	/^    "build": "vue-cli-service build",$/;"	s	object:scripts
+core-js	package.json	/^    "core-js": "^3.6.5",$/;"	s	object:dependencies
+crowdfunding	README.md	/^# crowdfunding$/;"	c
+cypress/globals	tests/e2e/.eslintrc.js	/^    'cypress\/globals': true,$/;"	p	class:module.exports.env
+dependencies	package.json	/^  "dependencies": {$/;"	o
+devDependencies	package.json	/^  "devDependencies": {$/;"	o
+env	package.json	/^        "env": {$/;"	o	object:eslintConfig.overrides.0
+env	package.json	/^    "env": {$/;"	o	object:eslintConfig
+env	tests/e2e/.eslintrc.js	/^  env: {$/;"	c	class:module.exports
+eslint	package.json	/^    "eslint": "^6.7.2",$/;"	s	object:devDependencies
+eslint-plugin-import	package.json	/^    "eslint-plugin-import": "^2.20.2",$/;"	s	object:devDependencies
+eslint-plugin-vue	package.json	/^    "eslint-plugin-vue": "^6.2.2",$/;"	s	object:devDependencies
+eslintConfig	package.json	/^  "eslintConfig": {$/;"	o
+exports	babel.config.js	/^module.exports = {$/;"	c	class:module
+exports	tests/e2e/.eslintrc.js	/^module.exports = {$/;"	c	class:module
+extends	package.json	/^    "extends": [$/;"	a	object:eslintConfig
+files	package.json	/^        "files": [$/;"	a	object:eslintConfig.overrides.0
+gitHooks	package.json	/^  "gitHooks": {$/;"	o
+jest	package.json	/^          "jest": true$/;"	b	object:eslintConfig.overrides.0.env
+jest	package.json	/^  "jest": {$/;"	o
+large	src/css/_functions.scss	/^  large: 61.25em,$/;"	v
+lint	package.json	/^    "lint": "vue-cli-service lint"$/;"	s	object:scripts
+lint-staged	package.json	/^    "lint-staged": "^9.5.0",$/;"	s	object:devDependencies
+lint-staged	package.json	/^  "lint-staged": {$/;"	o
+medium	src/css/_functions.scss	/^  medium: 60em,$/;"	v
+mocha	tests/e2e/.eslintrc.js	/^    mocha: true,$/;"	p	class:module.exports.env
+name	package.json	/^  "name": "crowdfunding",$/;"	s
+node	package.json	/^      "node": true$/;"	b	object:eslintConfig.env
+node-sass	package.json	/^    "node-sass": "^4.12.0",$/;"	s	object:devDependencies
+ns06076d620101	src/assets/icon-close-modal.svg	/^<svg width="15" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><path d="M11.314 0l2.828 2.82/;"	n	uri:http://www.w3.org/2000/svg
+ns0f36bf300101	src/assets/icon-check.svg	/^<svg width="64" height="64" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+ns2053c1280101	src/assets/icon-bookmark.svg	/^<svg width="56" height="56" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+ns26ca3bcf0101	src/assets/icon-hamburger.svg	/^<svg width="16" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="#FFF" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+ns309a49ed0101	public/img/icons/safari-pinned-tab.svg	/^<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http:\/\/www.w3.org\/2000\/sv/;"	n	uri:http://www.w3.org/2000/svg
+ns5cd680ca0101	src/assets/icon-close-menu.svg	/^<svg width="14" height="15" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="#FFF" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+ns8e67f2f60101	src/assets/logo-mastercraft.svg	/^<svg width="56" height="56" xmlns="http:\/\/www.w3.org\/2000\/svg"><g fill="none" fill-rule="eve/;"	n	uri:http://www.w3.org/2000/svg
+nscd44532d0101	src/assets/logo.svg	/^<svg width="128" height="20" xmlns="http:\/\/www.w3.org\/2000\/svg"><path d="M7.272 20c2.69 0 5./;"	n	uri:http://www.w3.org/2000/svg
+overrides	package.json	/^    "overrides": [$/;"	a	object:eslintConfig
+parser	package.json	/^      "parser": "babel-eslint"$/;"	s	object:eslintConfig.parserOptions
+parserOptions	package.json	/^    "parserOptions": {$/;"	o	object:eslintConfig
+plugins	tests/e2e/.eslintrc.js	/^  plugins: [$/;"	p	class:module.exports
+pluginsFile	cypress.json	/^  "pluginsFile": "tests\/e2e\/plugins\/index.js"$/;"	s
+pre-commit	package.json	/^    "pre-commit": "lint-staged"$/;"	s	object:gitHooks
+preset	package.json	/^    "preset": "@vue\/cli-plugin-unit-jest"$/;"	s	object:jest
+presets	babel.config.js	/^  presets: [$/;"	p	class:module.exports
+private	package.json	/^  "private": true,$/;"	b
+register-service-worker	package.json	/^    "register-service-worker": "^1.7.1",$/;"	s	object:dependencies
+root	package.json	/^    "root": true,$/;"	b	object:eslintConfig
+router	src/router/index.js	/^const router = new VueRouter({$/;"	C
+routes	src/router/index.js	/^const routes = [$/;"	C
+rules	package.json	/^    "rules": {},$/;"	o	object:eslintConfig
+rules	tests/e2e/.eslintrc.js	/^  rules: {$/;"	c	class:module.exports
+sass-loader	package.json	/^    "sass-loader": "^8.0.2",$/;"	s	object:devDependencies
+scripts	package.json	/^  "scripts": {$/;"	o
+serve	package.json	/^    "serve": "vue-cli-service serve",$/;"	s	object:scripts
+small	src/css/_functions.scss	/^  small: 40em,$/;"	v
+strict	tests/e2e/.eslintrc.js	/^    strict: 'off',$/;"	p	class:module.exports.rules
+test:e2e	package.json	/^    "test:e2e": "vue-cli-service test:e2e",$/;"	s	object:scripts
+test:unit	package.json	/^    "test:unit": "vue-cli-service test:unit",$/;"	s	object:scripts
+version	package.json	/^  "version": "0.1.0",$/;"	s
+vue	package.json	/^    "vue": "^2.6.11",$/;"	s	object:dependencies
+vue-router	package.json	/^    "vue-router": "^3.2.0",$/;"	s	object:dependencies
+vue-template-compiler	package.json	/^    "vue-template-compiler": "^2.6.11"$/;"	s	object:devDependencies
+vuex	package.json	/^    "vuex": "^3.4.0"$/;"	s	object:dependencies

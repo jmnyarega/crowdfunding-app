@@ -5,18 +5,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
     <Header />
     <Intro />
+    <Stats />
+    <Project />
+    <RewardModal />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Hero.vue';
 import Intro from '@/components/Intro.vue';
+import Stats from '../components/Stats.vue';
+import Project from '../components/Project.vue';
+import RewardModal from '../components/RewardModal.vue';
+
 import '../css/index.css';
 
 export default {
   components: {
     Header,
     Intro,
+    Stats,
+    Project,
+    RewardModal,
   },
 };
 </script>

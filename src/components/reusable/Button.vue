@@ -1,10 +1,19 @@
 <template>
-  <button
-    class="button"
-    :disabled="disabled"
-    @click="click">
-    {{value}}
-  </button>
+  <div>
+    <div class="link-button" v-if="type === 'link'">
+        <a :href="href" class="button">{{value}}</a>
+    </div>
+
+    <div class="normal-button" v-if="type !== 'link'">
+      <button
+          class="button"
+          :disabled="disabled"
+          @click="click">
+        {{value}}
+      </button>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -12,6 +21,7 @@ export default {
   name: 'Button',
   props: {
     value: String,
+    href: String,
     type: String,
     disabled: Boolean,
     click: Function,
@@ -24,19 +34,23 @@ export default {
 $desktop-media-1: 50em;
 
 .button {
+  text-decoration: none;
   color: var(--white);
   font-size: var(--fs-base);
   font-weight: 700;
-  box-shadow: none;
-  text-transform: initial;
-  font-weight: 700;
-  padding: 1em 2em;
-  background-color: var(--dark-cyan);
+
+  padding: 0.8em 1.6em;
+  border-radius: 99em;
+  border: 2px solid transparent;
+  background-color: var(--moderate-cyan);
 
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.7;
+  transition: all 350ms ease-in-out;
+  &:hover, &:focus {
+    background-color: var(--white);
+    color: var(--moderate-cyan);
+    border: 2px dashed;
   }
 }
 </style>

@@ -1,35 +1,3 @@
-.input {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  border-radius: 99em;
-  border: 2px solid transparent;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  border-radius: 99em;
-  border: 2px solid transparent;
-}
-
-.button {
-  display: inline-block;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: var(--white);
-  background-color: var(--blue);
-  cursor: pointer;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
-  transition: all 350ms ease-in-out;
-}
-
-.button:hover,
-.button:focus {
-  color: var(--blue);
-  background-color: transparent;
-  border: 2px solid;
-}
-
 /*----------------------------
 RESET: START
 ------------------------------*/
@@ -37,14 +5,12 @@ RESET: START
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-  padding: 0;
-}
+  padding: 0; }
 
 /* Remove default margin */
 body,
@@ -60,49 +26,42 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
+  padding: 0; }
 
 /* Set core root defaults */
 html {
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
+  line-height: 1.5; }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
+  text-decoration-skip-ink: auto; }
 
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
-  display: block;
-}
+  display: block; }
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {
-  margin-top: 1em;
-}
+  margin-top: 1em; }
 
 /* Inherit fonts for inputs and buttons */
 input,
 button,
 textarea,
 select {
-  font: inherit;
-}
+  font: inherit; }
 
 /* Blur images when they have no alt attribute */
 img:not([alt]) {
-  filter: blur(10px);
-}
+  filter: blur(10px); }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -110,9 +69,7 @@ img:not([alt]) {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+    scroll-behavior: auto !important; } }
 
 /*----------------------------
 Visually hidden
@@ -128,12 +85,10 @@ Visually hidden
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
-  white-space: nowrap !important;
-}
+  white-space: nowrap !important; }
 
 .container {
-  max-width: 90rem;
-  width: 80%;
+  max-width: var(--text-width);
+  width: 90%;
   margin-left: auto;
-  margin-right: auto;
-}
+  margin-right: auto; }

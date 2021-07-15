@@ -1,11 +1,11 @@
 <template>
   <div class="hamburger" @click="toggle">
-    <input type="checkbox" id="open-close" :checked=open />
-    <span></span>
-    <span></span>
-    <span></span>
-    <label for="open-close">
-    </label>
+      <input type="checkbox" id="open-close" :checked=open />
+      <div class="con">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
   </div>
 </template>
 
@@ -24,53 +24,61 @@ export default {
 
 <style lang="scss">
 .hamburger {
-  cursor: pointer;
-
-  label {
-    display: block;
-    width: calc(var(--sm-spacer) * 2);
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
   input {
     position: absolute;
     opacity: 0;
   }
 
-  span {
-    height: 2px;
+  .con,
+  .special-con {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .bar {
     display: block;
-    background-color: var(--white);
-
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+    height: 2px;
+    width: 45px;
+    background: var(--white);
+    margin: 10px auto;
   }
 
-  span + span {
-    margin-top: 4px;
+  .con {
+    width: auto;
+    margin: 0 auto;
+    transition: all .7s ease;
   }
 
-  span:first-of-type {
-    transform-origin: 0% 100%;
+  input:checked ~ .con .bar {
+    background-color: var(--gray);
   }
 
-   input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+  .col {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    height: auto;
+    position: relative;
   }
 
-  input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
+  .middle {
+    margin: 0 auto;
   }
 
-   input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(-1px, -2px);
+  .bar {
+    transition: all .7s ease;
+  }
+
+   input:checked ~ .con .top {
+    transform: translateY(12px) rotateZ(45deg);
+  }
+
+  input:checked ~ .con .bottom {
+    transform: translateY(-12px) rotateZ(-45deg);
+  }
+
+  input:checked ~ .con .middle {
+    width: 0;
   }
 }
 </style>

@@ -36,7 +36,7 @@ export default {
   position: relative;
 
   img {
-    width: 3rem;
+    width: 3.5rem;
   }
 
   &__title {
@@ -63,14 +63,20 @@ export default {
     gap: var(--bg-spacer);
     flex-wrap: wrap;
 
+    &__bookmark {
+      &:hover, &:focus {
+        opacity: 0.7;
+      }
+    }
+
     .button {
       color: var(--white);
       border: 2px solid transparent;
-      box-shadow: 0 0 6px 0.5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 6px 0.5px var(--gray);
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--moderate-cyan);
-        border: 2px solid;
+        border: 2px dashed;
       }
     }
   }

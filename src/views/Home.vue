@@ -3,15 +3,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
-    <Header />
-    <Intro />
-    <Stats />
-    <Project />
-    <RewardModal />
+    <div :class="show && 'overlay'"> </div>
+      <Header />
+      <Intro />
+      <Stats />
+      <Project />
+      <RewardModal />
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import Header from '@/components/Hero.vue';
 import Intro from '@/components/Intro.vue';
 import Stats from '../components/Stats.vue';
@@ -27,6 +30,14 @@ export default {
     Stats,
     Project,
     RewardModal,
+  },
+  computed: {
+    show() {
+      return (this.showRewardModal() || this.openMenu());
+    },
+  },
+  methods: {
+    ...mapGetters(['showRewardModal', 'openMenu']),
   },
 };
 </script>
@@ -56,5 +67,15 @@ export default {
     background-color: var(--gray);
     text-align: center;
     min-height: 100vh;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
   }
 </style>

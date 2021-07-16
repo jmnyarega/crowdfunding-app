@@ -26,14 +26,14 @@ export default {
       return this.getRewards();
     },
     show() {
-      return this.showModal();
+      return this.showRewardModal();
     },
   },
   methods: {
-    ...mapGetters(['getRewards', 'showModal']),
-    ...mapActions(['showReward']),
+    ...mapGetters(['getRewards', 'showRewardModal']),
+    ...mapActions(['toggleRewardModal']),
     closeModal() {
-      this.showReward();
+      this.toggleRewardModal();
     },
   },
 };
@@ -47,6 +47,7 @@ export default {
   right: 0;
   margin-top: var(--bg-spacer);
   padding: var(--bg-spacer);
+  z-index: 10;
 
   background-color: var(--white);
   box-shadow: 0 0 15px 5px rgba(0,0,0,0.3);

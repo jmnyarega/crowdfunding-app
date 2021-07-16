@@ -26,7 +26,7 @@
     top: -100rem;
     left:0;
     right: 0;
-    z-index: 2;
+    z-index: 10;
     opacity: 0;
 
     animation: open 350ms linear forwards;

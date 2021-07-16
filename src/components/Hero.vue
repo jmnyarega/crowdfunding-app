@@ -5,9 +5,10 @@
         <img src="../assets/logo.svg" alt="crowdfunding - home">
       </div>
       <div class="header__hamburger">
-        <Hamburger :open="open"  @nav-toggle="toggle" />
+        <Hamburger :open="open" />
       </div>
     </div>
+    {{open}}
     <div v-if="open" class="mobile-nav">
       <MobileNav />
     </div>
@@ -15,23 +16,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 import MobileNav from './nav/Mobile.vue';
 import Hamburger from './reusable/Hamburger.vue';
 
 export default {
-  data() {
-    return {
-      open: false,
-    };
+  computed: {
+    open() {
+      return this.openMenu();
+    },
   },
   components: {
     MobileNav,
     Hamburger,
   },
   methods: {
-    toggle() {
-      this.open = !this.open;
-    },
+    ...mapGetters(['openMenu']),
   },
 };
 </script>

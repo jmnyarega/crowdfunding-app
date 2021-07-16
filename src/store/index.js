@@ -5,7 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    show: false,
+    rewardModal: false,
+    modalSuccess: false,
+    menu: false,
     backed: 89914,
     backers: 5007,
     daysLeft: 56,
@@ -38,19 +40,30 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
-    toggle(state) {
-      state.show = !state.show;
+    toggleRewardModal(state) {
+      state.rewardModal = !state.rewardModal;
+    },
+    toggleMenu(state) {
+      state.menu = !state.menu;
+    },
+    toggleModalSuccess(state) {
+      state.modalSuccess = !state.modalSuccess;
     },
   },
   actions: {
-    showReward(state) {
-      state.commit('toggle');
+    toggleRewardModal(state) {
+      state.commit('toggleRewardModal');
+    },
+    toggleMenu(state) {
+      state.commit('toggleMenu');
     },
   },
   modules: {},
   getters: {
     getRewards: (state) => state.rewards,
-    showModal: (state) => state.show,
+    showRewardModal: (state) => state.rewardModal,
+    showSuccessModal: (state) => state.successModal,
+    openMenu: (state) => state.menu,
     getStats: (state) => ({
       backed: state.backed,
       backers: state.backers,

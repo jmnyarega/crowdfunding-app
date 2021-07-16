@@ -34,14 +34,14 @@ export default {
   },
   methods: {
     handleClick() {
-      this.showReward();
+      this.toggleRewardModal();
       /*
        - Looks like a hack, I am scrolling to the top on behave of the user
        - I am sure there is a better way [ to future me ] other than using the window object.
       */
       window.location.href = '#top';
     },
-    ...mapActions(['showReward']),
+    ...mapActions(['toggleRewardModal']),
   },
 };
 </script>

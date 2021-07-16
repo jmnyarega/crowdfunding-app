@@ -10,20 +10,26 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   props: {
     open: Boolean,
   },
   methods: {
     toggle() {
-      this.$emit('nav-toggle');
+      this.toggleMenu();
     },
+    ...mapActions(['toggleMenu']),
   },
 };
 </script>
 
 <style lang="scss">
 .hamburger {
+  z-index: 10;
+  position: relative;
+
   input {
     position: absolute;
     opacity: 0;

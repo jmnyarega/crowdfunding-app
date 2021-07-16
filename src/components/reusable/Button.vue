@@ -6,10 +6,11 @@
 
     <div class="normal-button" v-if="type !== 'link'">
       <button
-          class="button"
-          :disabled="disabled"
-          @click="click">
-        {{value}}
+        class="button"
+        :class="clas"
+        :disabled="disabled"
+        @click="click"
+      > {{value}}
       </button>
     </div>
 
@@ -23,6 +24,7 @@ export default {
     value: String,
     href: String,
     type: String,
+    clas: String,
     disabled: Boolean,
     click: Function,
   },
@@ -42,15 +44,22 @@ $desktop-media-1: 50em;
   padding: 0.8em 1.6em;
   border-radius: 99em;
   border: 2px solid transparent;
+  outline: none;
   background-color: var(--moderate-cyan);
 
   cursor: pointer;
 
   transition: all 350ms ease-in-out;
-  &:hover, &:focus {
-    background-color: var(--white);
-    color: var(--moderate-cyan);
-    border: 2px dashed;
+  &:not(.button--empty) {
+    &:hover, &:focus {
+      background-color: var(--white);
+      color: var(--dark-cyan);
+      border: 2px dashed;
+    }
+  }
+
+  &--empty {
+    background-color: var(--black);
   }
 }
 </style>

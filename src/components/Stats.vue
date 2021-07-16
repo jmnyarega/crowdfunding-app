@@ -15,14 +15,22 @@
       <h3 class="stat__title">{{stats.daysLeft}}</h3>
       <p class="stat__text">days left</p>
     </div>
+
+    <div class="meter">
+      <Meter :value=getPercentage() />
+    </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import Meter from './reusable/Meter.vue';
 
 export default {
   name: 'Stats',
+  components: {
+    Meter,
+  },
   computed: {
     stats() {
       return this.getStats();
@@ -30,6 +38,10 @@ export default {
   },
   methods: {
     ...mapGetters(['getStats']),
+    getPercentage() {
+      const percentage = ((this.stats.backed / this.stats.target) * 100);
+      return percentage <= 100 ? String(percentage) : '100';
+    },
   },
 };
 </script>
@@ -42,6 +54,11 @@ export default {
   padding: var(--bg-spacer) var(--sm-spacer);
   margin-top: var(--bg-spacer);
   max-width: var(--text-width);
+}
+.meter {
+  padding-top: var(--bg-spacer);
+  width: 80%;
+  margin: 0 auto;
 }
 
 .stat {

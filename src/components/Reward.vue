@@ -1,5 +1,5 @@
 <template>
-  <div class="reward">
+  <div class="reward" :class="reward.left == 0 && 'reward--empty'">
     <div class="reward__header">
       <h3 class="reward__title">{{reward.title}}</h3>
       <p class="reward__text">{{reward.text}}</p>
@@ -13,8 +13,10 @@
       </div>
       <div class="reward__select">
         <Button
-          value="Select Reward"
+          :value="reward.left > 0 ? 'Select Reward' : 'Out of stock'"
           :click="handleClick"
+          :clas="reward.left == 0 ? 'button--empty' : ''"
+          :disabled="reward.left == 0"
         />
       </div>
     </div>
@@ -59,6 +61,10 @@ export default {
     font-size: var(--fs-h3);
     padding-bottom: calc(var(--sm-spacer) / 5);
     line-height: 1;
+  }
+
+  &--empty {
+    opacity: 0.5;
   }
 
   &__content {

@@ -8,7 +8,6 @@
         <Hamburger :open="open" />
       </div>
     </div>
-    {{open}}
     <div v-if="open" class="mobile-nav">
       <MobileNav />
     </div>

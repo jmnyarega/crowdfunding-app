@@ -30,11 +30,9 @@ export default {
     },
   },
   methods: {
+    closeModal() { this.toggleRewardModal(); },
     ...mapGetters(['getRewards', 'showRewardModal']),
     ...mapActions(['toggleRewardModal']),
-    closeModal() {
-      this.toggleRewardModal();
-    },
   },
 };
 </script>

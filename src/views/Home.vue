@@ -9,6 +9,7 @@
       <Stats />
       <Project />
       <RewardModal />
+      <SuccessModal />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import Intro from '@/components/Intro.vue';
 import Stats from '../components/Stats.vue';
 import Project from '../components/Project.vue';
 import RewardModal from '../components/RewardModal.vue';
+import SuccessModal from '../components/reusable/SuccessModal.vue';
 
 import '../css/index.css';
 
@@ -30,14 +32,19 @@ export default {
     Stats,
     Project,
     RewardModal,
+    SuccessModal,
   },
   computed: {
     show() {
-      return (this.showRewardModal() || this.openMenu());
+      return (
+        this.showRewardModal()
+        || this.openMenu()
+        || this.showSuccessModal()
+      );
     },
   },
   methods: {
-    ...mapGetters(['showRewardModal', 'openMenu']),
+    ...mapGetters(['showRewardModal', 'openMenu', 'showSuccessModal']),
   },
 };
 </script>

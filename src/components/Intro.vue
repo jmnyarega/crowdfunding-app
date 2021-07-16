@@ -13,22 +13,34 @@
         type="link"
         value="Back this project"
       />
-      <a href="#0" class="cta__bookmark">
-        <img src="../assets/icon-bookmark.svg" alt="">
+      <a
+          href="#0"
+          class="cta__bookmark"
+          @click="handleClick"
+         :class="isBookmarked && 'cta__bookmark--bookmarked'"
+        >
+        <img src="../assets/icon-bookmark.svg" alt="" />
+        <span> {{ isBookmarked ? 'Bookmarked' : 'Bookmark' }} </span>
       </a>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import Button from './reusable/Button.vue';
 
 export default {
   components: {
     Button,
   },
+  computed: {
+    isBookmarked() { return this.getBookmarked(); },
+  },
   methods: {
-    handleClick() {},
+    handleClick() { this.setBookmark(); },
+    ...mapGetters(['getBookmarked']),
+    ...mapActions(['setBookmark']),
   },
 };
 </script>
@@ -72,8 +84,47 @@ export default {
     flex-wrap: wrap;
 
     &__bookmark {
-      &:hover, &:focus {
+      background-color: var(--gray);
+      border-radius: 99em;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: calc(var(--fs-h4) - 0.2rem);
+
+      span {
+        display: none;
+      }
+
+      @media (min-width: 60em) {
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        width: max-content;
+        padding-right: var(--sm-spacer);
+        border-radius: 99em;
+        color: var(--dark-gray);
+        span { display: block }
+      }
+
+      &:hover, &:hover {
         opacity: 0.7;
+      }
+      &--bookmarked {
+        background-color: var(--moderate-cyan);
+        border-radius: 50%;
+
+        span {
+          color: var(--dark-cyan);
+        }
+
+        img { mix-blend-mode: soft-light; }
+        @media (min-width: 60em) {
+          background-color: var(--gray);
+          border-radius: 99em;
+
+          img {
+            mix-blend-mode: initial;
+          }
+        }
       }
     }
 

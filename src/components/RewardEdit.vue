@@ -29,7 +29,6 @@
             type="number"
             placeholder="$"
             v-model="amount"
-            :min="reward.default"
             step="any"
           />
         </div>

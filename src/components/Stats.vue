@@ -2,17 +2,17 @@
   <div class="stats container">
 
     <div class="stat">
-      <h3 class="stat__title">${{stats.backed}}</h3>
-      <p class="stat__text">of $100, 000 backed</p>
+      <h3 class="stat__title">${{format(stats.backed)}}</h3>
+      <p class="stat__text">of ${{format(stats.target)}} backed</p>
     </div>
 
     <div class="stat">
-      <h3 class="stat__title">{{stats.backers}}</h3>
+      <h3 class="stat__title">{{format(stats.backers)}}</h3>
       <p class="stat__text">total backers</p>
     </div>
 
     <div class="stat">
-      <h3 class="stat__title">{{stats.daysLeft}}</h3>
+      <h3 class="stat__title">{{format(stats.daysLeft)}}</h3>
       <p class="stat__text">days left</p>
     </div>
 
@@ -41,6 +41,9 @@ export default {
     getPercentage() {
       const percentage = ((this.stats.backed / this.stats.target) * 100);
       return percentage <= 100 ? String(percentage) : '100';
+    },
+    format(number) {
+      return new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 }).format(number);
     },
   },
 };

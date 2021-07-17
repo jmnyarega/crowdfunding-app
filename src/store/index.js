@@ -14,10 +14,10 @@ export default new Vuex.Store({
     rewardModal: false,
     modalSuccess: false,
     menu: false,
-    backed: 89914,
-    backers: 5007,
-    daysLeft: 56,
-    target: 100000,
+    backed: 0,
+    backers: 0,
+    daysLeft: 100,
+    target: 3000,
     rewards: [
       {
         id: 0,
@@ -32,11 +32,11 @@ export default new Vuex.Store({
       {
         id: 1,
         title: 'Bamboo Stand',
-        text: 'Pledge $200 or more',
+        text: 'Pledge $25 or more',
         description: `You get two Special Edition Mahogany stands, a Backer T-Shirt,
                       and a personal thank you. You’ll be added to our Backer member
                       list. Shipping is included.`,
-        left: 100,
+        left: 75,
         reward: true,
         default: 25,
       },
@@ -46,9 +46,9 @@ export default new Vuex.Store({
         text: 'Pledge $75 or more',
         description: `You get a Black Special Edition computer stand and a personal thank you.
             You’ll be added to our Backer member list. Shipping is included.  `,
-        left: 64,
+        left: 20,
         reward: true,
-        default: 75,
+        default: 50,
       },
       {
         id: 3,
@@ -81,6 +81,7 @@ export default new Vuex.Store({
     updateFund(state, obj) {
       const reward = state.rewards.find(({ id }) => id === obj.id);
       if (reward.left > 0) reward.left -= 1;
+      console.log(obj.amount);
       state.backed += Number(obj.amount);
       state.backers += 1;
     },

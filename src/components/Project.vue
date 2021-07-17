@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 import About from './About.vue';
 import Reward from './Reward.vue';
 
@@ -23,11 +23,12 @@ export default {
   },
   computed: {
     rewards() {
-      return this.getRewards();
+      return this.getRewards().slice(1);
     },
   },
   methods: {
     ...mapGetters(['getRewards']),
+    ...mapActions(['setCurrentId']),
   },
 };
 </script>

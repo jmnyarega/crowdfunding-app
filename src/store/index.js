@@ -20,6 +20,16 @@ export default new Vuex.Store({
     target: 100000,
     rewards: [
       {
+        id: 0,
+        title: 'Pledge with no reward',
+        text: '',
+        description: `Choose to support us without a reward if you simply believe in our project.
+                      As a backer, you will be signed up to receive product updates via email.`,
+        left: Infinity,
+        reward: false,
+        default: 0,
+      },
+      {
         id: 1,
         title: 'Bamboo Stand',
         text: 'Pledge $200 or more',
@@ -27,6 +37,7 @@ export default new Vuex.Store({
                       and a personal thank you. You’ll be added to our Backer member
                       list. Shipping is included.`,
         left: 100,
+        reward: true,
         default: 25,
       },
       {
@@ -36,6 +47,7 @@ export default new Vuex.Store({
         description: `You get a Black Special Edition computer stand and a personal thank you.
             You’ll be added to our Backer member list. Shipping is included.  `,
         left: 64,
+        reward: true,
         default: 75,
       },
       {
@@ -45,6 +57,7 @@ export default new Vuex.Store({
         description: `You get two Special Edition Mahogany stands, a Backer T-Shirt,
         and a personal thank you. You’ll be added to our Backer member list. Shipping is included.`,
         left: 0,
+        reward: true,
         default: 200,
       },
     ],

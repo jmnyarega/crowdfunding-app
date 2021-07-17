@@ -14,7 +14,7 @@
     <div class="reward-edit__content">
       <p class="reward-edit__description">{{reward.description}}</p>
     </div>
-    <div class="reward-edit__footer">
+    <div class="reward-edit__footer" v-if="reward.reward">
       <div class="reward-edit__left">
         <span class="left">{{reward.left}}</span> left
       </div>

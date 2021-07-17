@@ -37,13 +37,14 @@ export default {
   methods: {
     handleClick() {
       this.toggleRewardModal();
+      this.setCurrentId(this.reward.id);
       /*
        - Looks like a hack, I am scrolling to the top on behave of the user
        - I am sure there is a better way [ to future me ] other than using the window object.
       */
       window.location.href = '#top';
     },
-    ...mapActions(['toggleRewardModal']),
+    ...mapActions(['toggleRewardModal', 'setCurrentId']),
   },
 };
 </script>

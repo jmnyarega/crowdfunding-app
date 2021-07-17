@@ -69,11 +69,11 @@ export default {
     font-size: calc(var(--fs-h3) + 1rem);
     line-height: 1;
     padding-bottom: calc(var(--sm-spacer) / 3);
+    color: initial;
   }
 
   &__text {
     font-size: calc(var(--fs-h4));
-    color: var(--dark-gray);
   }
 }
 

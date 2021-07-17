@@ -58,6 +58,7 @@ export default {
     font-size: var(--fs-h3);
     padding-bottom: calc(var(--bg-spacer));
     line-height: 1;
+    color: initial;
   }
 
   &__text {

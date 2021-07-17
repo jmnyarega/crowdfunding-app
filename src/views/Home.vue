@@ -72,8 +72,19 @@ export default {
     font-family: var(--ff-default);
     font-size: var(--fs-base);
     background-color: var(--gray);
+    color: var(--dark-gray);
     text-align: center;
     min-height: 100vh;
+
+    @media (min-width: 60em) {
+      --ff-default: 'Commissioner', sans-serif;
+      --fs-base: 1.1rem;
+      --fs-h4: 1.5rem;
+      --fs-h3: 2rem;
+
+      --sm-spacer: 1.5rem;
+      --bg-spacer: 3rem;
+    }
   }
 
   .overlay {

@@ -63,6 +63,7 @@ export default {
     font-size: var(--fs-h3);
     line-height: 1;
     padding-bottom: var(--sm-spacer);
+    color: initial;
   }
 
   &__logo {

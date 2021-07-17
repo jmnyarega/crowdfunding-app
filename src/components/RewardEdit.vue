@@ -4,39 +4,49 @@
     @click="handleSelect(reward.id)"
     :class="getClasses()"
   >
+
+    <!--------------->
     <div class="reward-edit__body">
-      <div class="reward-edit__header">
-        <div class="input">
-          <Radio :checked="selected == reward.id"/>
-        </div>
+      <div class="input">
+        <Radio :checked="selected == reward.id"/>
+      </div>
+
+      <div class="text">
         <h3 class="reward-edit__title">{{reward.title}}</h3>
-        <p class="reward-edit__text">{{reward.text}}</p>
+        <p class="reward-edit__sub-title">{{reward.text}}</p>
       </div>
-      <div class="reward-edit__content">
-        <p class="reward-edit__description">{{reward.description}}</p>
+
+      <p class="reward-edit__description">{{reward.description}}</p>
+
+      <div class="reward-edit__left"  v-if="reward.reward">
+        <span class="left">{{reward.left}}</span> left
       </div>
-      <div class="reward-edit__footer" v-if="reward.reward">
-        <div class="reward-edit__left">
-          <span class="left">{{reward.left}}</span> left
-        </div>
-      </div>
+
     </div>
+    <!--------------->
+
+    <!--------------->
     <div class="pledge" v-if="selected == reward.id">
       <h3>Enter Your pledge</h3>
-      <form>
+
+      <form @submit="handleSubmit">
         <div class="pledge__input">
           <input
             type="number"
             placeholder="$"
             v-model="amount"
             step="any"
+            required
           />
         </div>
         <div class="pledge__button">
-          <Button value="Continue" :click="handleSubmit"/>
+          <Button value="Continue" type="submit"/>
         </div>
       </form>
+
     </div>
+    <!--------------->
+
   </div>
 </template>
 
@@ -71,11 +81,14 @@ export default {
       'toggleModalSuccessModal',
     ]),
     ...mapGetters(['getCurrentId']),
-    handleSubmit() {
-      this.updateFund({ amount: this.amount, id: this.reward.id });
-      this.toggleRewardModal();
-      this.toggleModalSuccessModal();
-      window.location = '#top';
+    handleSubmit(evt) {
+      evt.preventDefault();
+      if (this.amount >= this.reward.default) {
+        this.updateFund({ amount: this.amount, id: this.reward.id });
+        this.toggleRewardModal();
+        this.toggleModalSuccessModal();
+        window.location = '#top';
+      }
     },
     handleSelect(id) {
       if (this.reward.left > 0) { this.setCurrentId(id); }
@@ -121,44 +134,67 @@ export default {
     padding-bottom: calc(var(--sm-spacer) / 3);
     line-height: 1;
     grid-area: b;
+    color: initial;
   }
 
-  &__content {
-    padding-bottom: var(--sm-spacer);
-  }
-
-  &__header {
-    padding-bottom: var(--sm-spacer);
-    max-width: 25ch;
-    display: grid;
-    grid-column-gap: var(--sm-spacer);
-    grid-template-areas: "a b" "a c";
-
-    @media (min-width: 60em) {
-      max-width: max-content;
-    }
-
-    .input {
-      grid-area: a;
-      align-self: center;
-    }
-  }
-
-  &__text {
+  &__sub-title {
     color: var(--moderate-cyan);
     font-weight: 700;
-    grid-area: c;
+  }
+
+  &__description {
+    color: var(--dark-gray);
+  }
+
+  &__body {
+    display: grid;
+    column-gap: 2rem;
+    margin-bottom: calc(var(--sm-spacer) * 2);
+    grid-template-columns: 0fr 1fr;
+    grid-template-areas: "input text"
+                         "para para"
+                        "left left";
+
+    @media (min-width: 50em) {
+      max-width: max-content;
+      grid-template-areas: "input text left"
+                           "input para para"
+    }
+    .input {
+      grid-area: input;
+    }
+
+    .text {
+      grid-area: text;
+      margin-bottom: var(--sm-spacer);
+      @media (min-width: 50em) {
+        display: flex;
+        column-gap: 1rem;
+        width: max-content;
+      }
+    }
+    .reward-edit__description {
+      grid-area: para;
+    }
+    .reward-edit__left {
+      grid-area: left;
+      padding-top: calc(var(--sm-spacer) / 2);
+      @media (min-width: 50em) {
+        justify-self: flex-end;
+        align-self: flex-start;
+        padding-top: 0;
+      }
+    }
   }
 
   &__left {
     display: flex;
     align-items: center;
     column-gap: calc(var(--sm-spacer) / 3);
-    margin-bottom: var(--sm-spacer);
-
     .left {
       font-size: var(--fs-h3);
       font-weight: bold;
+      color: initial;
     }
   }
 }
@@ -170,6 +206,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: calc(var(--sm-spacer) * 2);
   }
   h3 {
     font-weight: normal;
@@ -181,7 +218,10 @@ export default {
     display: flex;
     justify-content: center;
     column-gap: 0.5rem;
-    padding-top: var(--sm-spacer);
+    padding-top: calc(var(--sm-spacer));
+    @media (min-width: 60em) {
+      padding-top: 0;
+    }
 
     input {
       border-radius: 99em;

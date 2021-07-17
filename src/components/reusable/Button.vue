@@ -9,6 +9,7 @@
         class="button"
         :class="clas"
         :disabled="disabled"
+        :type="type"
         @click="click"
       > {{value}}
       </button>

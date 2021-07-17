@@ -62,6 +62,7 @@ export default {
     font-size: var(--fs-h3);
     padding-bottom: calc(var(--sm-spacer) / 5);
     line-height: 1;
+    color: initial;
   }
 
   &--empty {
@@ -101,6 +102,7 @@ export default {
     .left {
       font-size: var(--fs-h3);
       font-weight: bold;
+      color: initial;
     }
   }
 }

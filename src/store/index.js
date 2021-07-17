@@ -81,9 +81,10 @@ export default new Vuex.Store({
     updateFund(state, obj) {
       const reward = state.rewards.find(({ id }) => id === obj.id);
       if (reward.left > 0) reward.left -= 1;
-      console.log(obj.amount);
-      state.backed += Number(obj.amount);
-      state.backers += 1;
+      if (obj.amount > 0) {
+        state.backed += Number(obj.amount);
+        state.backers += 1;
+      }
     },
   },
   actions: {

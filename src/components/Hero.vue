@@ -60,6 +60,8 @@ export default {
     background: no-repeat url(../assets/image-hero-mobile.jpg);
     background-size: cover;
     background-position: center;
+    background-color: var(--gray);
+    background-blend-mode: multiply;
     min-height: 24rem;
 
     @media (min-width: 60em) {

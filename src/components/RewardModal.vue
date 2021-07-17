@@ -55,10 +55,7 @@ export default {
   &__title {
     font-size: var(--fs-h3);
     padding-bottom: calc(var(--sm-spacer) / 2);
-  }
-
-  &__text {
-    color: var(--dark-gray);
+    color: initial;
   }
 
   &__header {

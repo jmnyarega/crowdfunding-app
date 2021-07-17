@@ -4,19 +4,21 @@
     @click="handleSelect(reward.id)"
     :class="getClasses()"
   >
-    <div class="reward-edit__header">
-      <div class="input">
-        <Radio :checked="selected == reward.id"/>
+    <div class="reward-edit__body">
+      <div class="reward-edit__header">
+        <div class="input">
+          <Radio :checked="selected == reward.id"/>
+        </div>
+        <h3 class="reward-edit__title">{{reward.title}}</h3>
+        <p class="reward-edit__text">{{reward.text}}</p>
       </div>
-      <h3 class="reward-edit__title">{{reward.title}}</h3>
-      <p class="reward-edit__text">{{reward.text}}</p>
-    </div>
-    <div class="reward-edit__content">
-      <p class="reward-edit__description">{{reward.description}}</p>
-    </div>
-    <div class="reward-edit__footer" v-if="reward.reward">
-      <div class="reward-edit__left">
-        <span class="left">{{reward.left}}</span> left
+      <div class="reward-edit__content">
+        <p class="reward-edit__description">{{reward.description}}</p>
+      </div>
+      <div class="reward-edit__footer" v-if="reward.reward">
+        <div class="reward-edit__left">
+          <span class="left">{{reward.left}}</span> left
+        </div>
       </div>
     </div>
     <div class="pledge" v-if="selected == reward.id">
@@ -133,6 +135,10 @@ export default {
     grid-column-gap: var(--sm-spacer);
     grid-template-areas: "a b" "a c";
 
+    @media (min-width: 60em) {
+      max-width: max-content;
+    }
+
     .input {
       grid-area: a;
       align-self: center;
@@ -161,6 +167,11 @@ export default {
 .pledge {
   border-top: 1px solid var(--gray);
   padding-top: var(--sm-spacer);
+  @media (min-width: 60em) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   h3 {
     font-weight: normal;
     color: var(--dark-gray);

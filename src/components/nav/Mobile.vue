@@ -2,19 +2,30 @@
   <div class="nav container">
     <ul class="nav__items">
       <li class="nav__item">
-        <a class="nav__link" href="#0">about</a>
+        <a class="nav__link" @click="handleClick()" href="#project">about</a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#0">Discover</a>
+        <a class="nav__link" @click="handleClick()" href="#project">Discover</a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#0">get Started</a>
+        <a class="nav__link" @click="handleClick()" href="#project">get Started</a>
       </li>
     </ul>
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import { mapActions } from 'vuex';
+
+export default {
+  methods: {
+    ...mapActions(['toggleMenu']),
+    handleClick() { this.toggleMenu(); },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
   .nav {
     background-color: var(--white);
     box-shadow: 0 0 10px 5px var(--dark-gray);

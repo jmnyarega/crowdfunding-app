@@ -1,9 +1,10 @@
 <template>
   <div class="header--bg">
-    <div class="header container">
+    <div class="header container-xl">
       <div class="header__logo">
         <img src="../assets/logo.svg" alt="crowdfunding - home">
       </div>
+        <DesktopNav />
       <div class="header__hamburger">
         <Hamburger :open="open" />
       </div>
@@ -11,6 +12,7 @@
     <div v-if="open" class="mobile-nav">
       <MobileNav />
     </div>
+
   </div>
 </template>
 
@@ -18,17 +20,19 @@
 import { mapGetters } from 'vuex';
 
 import MobileNav from './nav/Mobile.vue';
+import DesktopNav from './nav/Desktop.vue';
 import Hamburger from './reusable/Hamburger.vue';
 
 export default {
+  components: {
+    MobileNav,
+    Hamburger,
+    DesktopNav,
+  },
   computed: {
     open() {
       return this.openMenu();
     },
-  },
-  components: {
-    MobileNav,
-    Hamburger,
   },
   methods: {
     ...mapGetters(['openMenu']),
@@ -37,11 +41,13 @@ export default {
 </script>
 
 <style lang="scss">
-@media (min-width: 60em) {
-  .mobile-nav, .header__hamburger {
-    opacity: 0;
-    z-index: -1;
-  }
+.mobile-nav, .header__hamburger {
+  position: initial;
+  @media (min-width: 60em) {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+    }
 }
 
 .header {
@@ -55,10 +61,26 @@ export default {
     background-size: cover;
     background-position: center;
     min-height: 24rem;
+
+    @media (min-width: 60em) {
+      min-height: 30rem;
+    }
   }
 
   &__hamburger {
     cursor: pointer;
+  }
+}
+
+.container-xl {
+  max-width: var(--text-width);
+  width: 80%;
+  margin: 0 auto;
+
+  @media (min-width: 60em) {
+    max-width: 120em;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 </style>

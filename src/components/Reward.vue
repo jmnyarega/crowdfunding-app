@@ -74,11 +74,22 @@ export default {
 
   &__header {
     padding-bottom: var(--sm-spacer);
+    @media (min-width: 60em) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__text {
     color: var(--moderate-cyan);
     font-weight: 700;
+  }
+
+  &__footer {
+    @media (min-width: 60em) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__left {

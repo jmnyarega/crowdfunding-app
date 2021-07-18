@@ -3,10 +3,6 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-/*
- * - SuccessModal
- * - pleadge
- */
 export default new Vuex.Store({
   state: {
     isBookmark: false,
@@ -80,10 +76,10 @@ export default new Vuex.Store({
     },
     updateFund(state, obj) {
       const reward = state.rewards.find(({ id }) => id === obj.id);
-      if (reward.left > 0) reward.left -= 1;
-      if (obj.amount > 0) {
+      if (obj.amount > 0 && reward.left > 0) {
         state.backed += Number(obj.amount);
         state.backers += 1;
+        reward.left -= 1;
       }
     },
   },

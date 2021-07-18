@@ -28,7 +28,7 @@ export default {
 <style lang="scss" scoped>
   .nav {
     background-color: var(--white);
-    box-shadow: 0 0 10px 5px var(--dark-gray);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius);
     align-items: initial;
     max-width: var(--text-width);
@@ -46,7 +46,6 @@ export default {
       100% {
         opacity: 1;
         top: 6rem;
-         animation-timing-function: linear;
       }
     }
 
@@ -57,9 +56,6 @@ export default {
 
     &__item {
       padding: calc(var(--sm-spacer) / 1.4) var(--sm-spacer);
-      &:hover {
-        color: var(--moderate-cyan);
-      }
     }
 
     &__item + &__item {
@@ -68,10 +64,17 @@ export default {
     }
 
     &__link {
-      color: inherit;
+      color: initial;
       text-decoration: none;
+      outline: none;
       text-transform: capitalize;
-      font-size: var(--fs-h5);
+      font-size: var(--fs-h4);
+      border-bottom: 2px solid transparent;
+
+      &:hover, &:focus {
+        color: var(--moderate-cyan);
+        border-bottom: 2px dashed;
+      }
     }
   }
 </style>

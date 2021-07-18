@@ -21,7 +21,8 @@
         >
         <img src="../assets/icon-bookmark-checked.svg" alt="" v-if="isBookmarked" />
         <img src="../assets/icon-bookmark.svg" alt="" v-if="!isBookmarked" />
-        <span> {{ isBookmarked ? 'Bookmarked' : 'Bookmark' }} </span>
+        <span v-if="isBookmarked"> Bookmarked </span>
+        <span v-if="!isBookmarked"> Bookmark </span>
       </a>
     </div>
   </div>
@@ -86,16 +87,6 @@ export default {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    .button {
-      color: var(--white);
-      border: 2px solid transparent;
-
-      &:hover, &:focus {
-        color: var(--moderate-cyan);
-        border: 2px dashed;
-      }
-    }
 
     &__bookmark {
       color: var(--dark-gray);

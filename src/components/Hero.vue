@@ -56,10 +56,11 @@ export default {
   padding-top: var(--sm-spacer);
 
   &--bg {
-    background: no-repeat url(../assets/image-hero-mobile.jpg);
+    background: no-repeat
+                url(../assets/image-hero-mobile.jpg)
+                center
+                var(--dark-gray);
     background-size: cover;
-    background-position: center;
-    background-color: var(--dark-gray);
     background-blend-mode: multiply;
     min-height: 24rem;
 

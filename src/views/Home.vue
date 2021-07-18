@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
     <div :class="show && 'overlay'" />
-    <Header />
+    <Hero />
     <Intro />
     <Stats />
     <Project />
@@ -16,7 +16,7 @@
 <script>
 import { mapGetters } from 'vuex';
 
-import Header from '@/components/Hero.vue';
+import Hero from '@/components/Hero.vue';
 import Intro from '@/components/Intro.vue';
 import Stats from '../components/Stats.vue';
 import Project from '../components/Project.vue';
@@ -27,7 +27,7 @@ import '../css/index.css';
 
 export default {
   components: {
-    Header,
+    Hero,
     Intro,
     Stats,
     Project,

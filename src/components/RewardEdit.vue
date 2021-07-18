@@ -154,7 +154,6 @@ export default {
 
     @media (min-width: 50em) {
       margin-bottom: var(--sm-spacer);
-      max-width: max-content;
       grid-template-areas: "input text left"
                            "input para para"
     }
@@ -168,7 +167,6 @@ export default {
       @media (min-width: 50em) {
         display: flex;
         column-gap: var(--sm-spacer);
-        width: max-content;
       }
     }
     .reward-edit__description {

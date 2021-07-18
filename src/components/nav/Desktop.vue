@@ -19,7 +19,7 @@
   @media (max-width: 49em) {
     display: none;
   }
-  margin-left: auto;
+
   &__link {
     text-decoration: none;
     color: var(--white);
@@ -30,14 +30,14 @@
 
     &::after {
       content: "";
-      height: 1px;
+      height: 1.5px;
       background-color: currentColor;
       position: absolute;
       bottom: 0;
       left: 100%;
       right: 100%;
 
-      transition: all 350ms ease-in;
+      transition: all 350ms linear;
     }
 
     &:hover::after {

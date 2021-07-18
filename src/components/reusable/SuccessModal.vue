@@ -45,7 +45,7 @@ export default {
   left:0;
   right: 0;
   z-index: 10;
-  transform: translateY(-50%);
+  transform: translateY(-50%); // center vertically
 
   img {
     width: 5rem;

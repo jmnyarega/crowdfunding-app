@@ -57,6 +57,7 @@ export default {
     --dark-gray: hsl(0, 0%, 48%);
     --white: hsl(0, 100%, 100%);
     --gray: hsl(0, 0%, 90%);
+    --light-cyan: hsl(192, 29%, 97%);
 
     --ff-default: 'Commissioner', sans-serif;
     --fs-base: 0.9375rem;
@@ -76,7 +77,7 @@ export default {
     text-align: center;
     min-height: 100vh;
 
-    @media (min-width: 60em) {
+    @media (min-width: 50em) {
       --ff-default: 'Commissioner', sans-serif;
       --fs-base: 1.1rem;
       --fs-h4: 1.5rem;

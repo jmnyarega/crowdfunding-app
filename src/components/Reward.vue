@@ -2,11 +2,9 @@
   <div class="reward" :class="reward.left == 0 && 'reward--empty'">
     <div class="reward__header">
       <h3 class="reward__title">{{reward.title}}</h3>
-      <p class="reward__text">{{reward.text}}</p>
+      <p class="reward__sub-title">{{reward.text}}</p>
     </div>
-    <div class="reward__content">
-      <p class="reward__description">{{reward.description}}</p>
-    </div>
+    <p class="reward__description">{{reward.description}}</p>
     <div class="reward__footer">
       <div class="reward__left">
         <span class="left">{{reward.left}}</span> left
@@ -55,7 +53,7 @@ export default {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
               -3px -3px 6px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
-  padding: var(--bg-spacer);
+  padding: var(--sm-spacer) var(--bg-spacer);
   margin-top: var(--bg-spacer);
 
   &__title {
@@ -69,25 +67,25 @@ export default {
     opacity: 0.5;
   }
 
-  &__content {
+  &__description {
     padding-bottom: var(--sm-spacer);
   }
 
   &__header {
     padding-bottom: var(--sm-spacer);
-    @media (min-width: 60em) {
+    @media (min-width: 50em) {
       display: flex;
       justify-content: space-between;
     }
   }
 
-  &__text {
+  &__sub-title {
     color: var(--moderate-cyan);
     font-weight: 700;
   }
 
   &__footer {
-    @media (min-width: 60em) {
+    @media (min-width: 50em) {
       display: flex;
       justify-content: space-between;
     }
@@ -98,7 +96,9 @@ export default {
     align-items: center;
     column-gap: calc(var(--sm-spacer) / 3);
     margin-bottom: var(--sm-spacer);
-
+    @media (min-width: 50em) {
+      margin-bottom: 0;
+    }
     .left {
       font-size: var(--fs-h3);
       font-weight: bold;

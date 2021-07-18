@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 .nav {
-  @media (max-width: 60em) {
+  @media (max-width: 49em) {
     display: none;
   }
   margin-left: auto;

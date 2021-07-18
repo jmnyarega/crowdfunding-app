@@ -33,9 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// $breakpoints
-$desktop-media-1: 50em;
-
 .button {
   text-decoration: none;
   color: var(--white);

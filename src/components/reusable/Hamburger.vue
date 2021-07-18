@@ -55,24 +55,12 @@ export default {
     transition: all .7s ease;
   }
 
-  input:checked ~ .con .bar {
-    background-color: var(--gray);
-  }
-
-  .col {
-    display: inline-block;
-    width: 24%;
-    text-align: center;
-    height: auto;
-    position: relative;
-  }
-
-  .middle {
-    margin: 0 auto;
-  }
-
   .bar {
     transition: all .7s ease;
+  }
+
+  input:checked ~ .con .bar {
+    background-color: var(--gray);
   }
 
    input:checked ~ .con .top {

@@ -1,9 +1,9 @@
 <template>
   <div class="header--bg">
     <div class="header container-xl">
-      <div class="header__logo">
+      <a href="" class="header__logo">
         <img src="../assets/logo.svg" alt="crowdfunding - home">
-      </div>
+      </a>
         <DesktopNav />
       <div class="header__hamburger">
         <Hamburger :open="open" />
@@ -42,7 +42,7 @@ export default {
 <style lang="scss">
 .mobile-nav, .header__hamburger {
   position: initial;
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     opacity: 0;
     position: absolute;
     z-index: -1;
@@ -59,11 +59,11 @@ export default {
     background: no-repeat url(../assets/image-hero-mobile.jpg);
     background-size: cover;
     background-position: center;
-    background-color: var(--gray);
-    background-blend-mode: darken;
+    background-color: var(--dark-gray);
+    background-blend-mode: multiply;
     min-height: 24rem;
 
-    @media (min-width: 60em) {
+    @media (min-width: 50em) {
       min-height: 30rem;
     }
   }
@@ -78,7 +78,7 @@ export default {
   width: 80%;
   margin: 0 auto;
 
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     max-width: 120em;
     width: 80%;
     margin: 0 auto;

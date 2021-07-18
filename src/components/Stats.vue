@@ -57,7 +57,7 @@ export default {
   padding: var(--bg-spacer) var(--sm-spacer);
   margin-top: var(--bg-spacer);
   max-width: var(--text-width);
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     display: grid;
     grid-template-areas: "backed backers days-left"
                          "progress progress progress"
@@ -90,12 +90,13 @@ export default {
   border-top: 1px solid var(--gray);
   padding-top: calc(var(--bg-spacer) / 1.2);
   margin-top: calc(var(--bg-spacer) / 3);
-  @media (min-width: 60em) {
-    border-top: none;
+  @media (min-width: 50em) {
+    border-top: unset;
+    width: unset;
+    margin: unset;
+
     border-left: 1px solid var(--gray);
     padding: 0 1rem;
-    width: auto;
-    margin: 0;
   }
 }
 </style>

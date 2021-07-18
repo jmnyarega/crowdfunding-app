@@ -42,10 +42,9 @@ export default {
 <style lang="scss">
 .reward-modal {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 0;
   right: 0;
-  margin-top: var(--bg-spacer);
   padding: var(--bg-spacer);
   z-index: 10;
 
@@ -64,6 +63,7 @@ export default {
     display: flex;
     align-items: center;
   }
+
   img {
     cursor: pointer;
     margin-left: auto;

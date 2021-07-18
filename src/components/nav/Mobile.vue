@@ -31,7 +31,7 @@ export default {
     box-shadow: 0 0 10px 5px var(--dark-gray);
     border-radius: var(--border-radius);
     align-items: initial;
-    max-width: calc(var(--text-width));
+    max-width: var(--text-width);
 
     position: absolute;
     top: -100rem;
@@ -46,7 +46,7 @@ export default {
       100% {
         opacity: 1;
         top: 6rem;
-         animation-timing-function: ease-in-out;
+         animation-timing-function: linear;
       }
     }
 

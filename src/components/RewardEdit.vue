@@ -105,14 +105,13 @@ export default {
 </script>
 
 <style lang="scss">
-
 .reward-edit {
   background-color: var(--white);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
               -3px -3px 6px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   border: 2px solid transparent;
-  padding: var(--bg-spacer);
+  padding: var(--sm-spacer) var(--bg-spacer);
   margin-top: var(--bg-spacer);
   cursor: pointer;
 
@@ -149,13 +148,14 @@ export default {
   &__body {
     display: grid;
     column-gap: calc(var(--sm-spacer) * 2);
-    margin-bottom: calc(var(--sm-spacer) * 2);
+    margin-bottom: calc(var(--sm-spacer) * 0.5);
     grid-template-columns: 0fr 1fr; // ??
     grid-template-areas: "input text"
                          "para para"
-                        "left left";
+                         "left left";
 
-    @media (min-width: 60em) {
+    @media (min-width: 50em) {
+      margin-bottom: var(--sm-spacer);
       max-width: max-content;
       grid-template-areas: "input text left"
                            "input para para"
@@ -167,7 +167,7 @@ export default {
     .text {
       grid-area: text;
       margin-bottom: var(--sm-spacer);
-      @media (min-width: 60em) {
+      @media (min-width: 50em) {
         display: flex;
         column-gap: var(--sm-spacer);
         width: max-content;
@@ -178,8 +178,8 @@ export default {
     }
     .reward-edit__left {
       grid-area: left;
-      padding-top: calc(var(--sm-spacer) / 2);
-      @media (min-width: 60em) {
+      padding-top: var(--sm-spacer);
+      @media (min-width: 50em) {
         justify-self: flex-end;
         align-self: flex-start;
         padding-top: 0;
@@ -202,15 +202,13 @@ export default {
 .pledge {
   border-top: 1px solid var(--gray);
   padding-top: var(--sm-spacer);
-  @media (min-width: 60em) {
+  @media (min-width: 50em) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: calc(var(--sm-spacer) * 2);
   }
   h3 {
     font-weight: normal;
-    color: var(--dark-gray);
     text-align: center;
   }
 
@@ -218,8 +216,8 @@ export default {
     display: flex;
     justify-content: center;
     column-gap: 0.5rem;
-    padding-top: calc(var(--sm-spacer));
-    @media (min-width: 60em) {
+    padding-top: var(--sm-spacer);
+    @media (min-width: 50em) {
       padding-top: 0;
     }
 

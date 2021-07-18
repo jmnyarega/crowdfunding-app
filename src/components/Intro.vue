@@ -14,7 +14,7 @@
         value="Back this project"
       />
       <a
-          href="#"
+          href=""
           class="cta__bookmark"
           @click="handleClick"
          :class="isBookmarked && 'cta__bookmark--bookmarked'"
@@ -39,7 +39,10 @@ export default {
     isBookmarked() { return this.getBookmarked(); },
   },
   methods: {
-    handleClick() { this.setBookmark(); },
+    handleClick(evt) {
+      evt.preventDefault();
+      this.setBookmark();
+    },
     ...mapGetters(['getBookmarked']),
     ...mapActions(['setBookmark']),
   },
@@ -60,18 +63,18 @@ export default {
     width: 3.5rem;
   }
 
-  &__title {
-    font-size: var(--fs-h3);
-    line-height: 1;
-    padding-bottom: var(--sm-spacer);
-    color: initial;
-  }
-
   &__logo {
     position: absolute;
     top: -2rem;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  &__title {
+    font-size: var(--fs-h3);
+    line-height: 1;
+    padding-bottom: var(--sm-spacer);
+    color: initial;
   }
 
   &__para {
@@ -82,8 +85,18 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--bg-spacer);
     flex-wrap: wrap;
+
+    .button {
+      color: var(--white);
+      border: 2px solid transparent;
+      box-shadow: 0 0 6px 0.5px var(--gray);
+
+      &:hover, &:focus {
+        color: var(--moderate-cyan);
+        border: 2px dashed;
+      }
+    }
 
     &__bookmark {
       background-color: var(--gray);
@@ -96,7 +109,7 @@ export default {
         display: none;
       }
 
-      @media (min-width: 60em) {
+      @media (min-width: 50em) {
         display: flex;
         align-items: center;
         column-gap: 0.5rem;
@@ -113,21 +126,11 @@ export default {
       &--bookmarked {
         border-radius: 50%;
         color: var(--moderate-cyan);
+        background-color: var(--light-cyan);
 
-        @media (min-width: 60em) {
+        @media (min-width: 50em) {
           border-radius: 99em;
         }
-      }
-    }
-
-    .button {
-      color: var(--white);
-      border: 2px solid transparent;
-      box-shadow: 0 0 6px 0.5px var(--gray);
-
-      &:hover, &:focus {
-        color: var(--moderate-cyan);
-        border: 2px dashed;
       }
     }
   }

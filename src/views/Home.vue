@@ -3,13 +3,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
-    <div :class="show && 'overlay'"> </div>
-      <Header />
-      <Intro />
-      <Stats />
-      <Project />
-      <RewardModal />
-      <SuccessModal />
+    <div :class="show && 'overlay'" />
+    <Header />
+    <Intro />
+    <Stats />
+    <Project />
+    <RewardModal />
+    <SuccessModal />
   </main>
 </template>
 
@@ -78,7 +78,6 @@ export default {
     min-height: 100vh;
 
     @media (min-width: 50em) {
-      --ff-default: 'Commissioner', sans-serif;
       --fs-base: 1.1rem;
       --fs-h4: 1.5rem;
       --fs-h3: 2rem;

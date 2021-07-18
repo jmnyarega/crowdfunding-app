@@ -33,7 +33,7 @@ export default {
   padding: var(--bg-spacer);
 
   background-color: var(--white);
-  box-shadow: 0 0 10px 1px var(--gray);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   text-align: initial;
 }

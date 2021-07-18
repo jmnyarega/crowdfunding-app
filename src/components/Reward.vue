@@ -50,21 +50,20 @@ export default {
 <style lang="scss">
 .reward {
   background-color: var(--white);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
-              -3px -3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px 1px var(--gray);
   border-radius: var(--border-radius);
   padding: var(--sm-spacer) var(--bg-spacer);
   margin-top: var(--bg-spacer);
+
+  &--empty {
+    opacity: 0.5;
+  }
 
   &__title {
     font-size: var(--fs-h3);
     padding-bottom: calc(var(--sm-spacer) / 5);
     line-height: 1;
     color: initial;
-  }
-
-  &--empty {
-    opacity: 0.5;
   }
 
   &__description {

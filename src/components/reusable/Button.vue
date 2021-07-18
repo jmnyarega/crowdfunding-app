@@ -36,8 +36,7 @@ export default {
 .button {
   text-decoration: none;
   color: var(--white);
-  font-size: var(--fs-base);
-  font-weight: 700;
+  font-weight: 500;
 
   padding: 0.8em 1.6em;
   border-radius: 99em;

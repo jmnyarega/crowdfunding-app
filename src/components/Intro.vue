@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .intro {
   background-color: var(--white);
-  box-shadow: 0 0 10px 1px var(--gray);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   padding: var(--bg-spacer) var(--sm-spacer);
   margin-top: -4rem;
@@ -90,7 +90,6 @@ export default {
     .button {
       color: var(--white);
       border: 2px solid transparent;
-      box-shadow: 0 0 6px 0.5px var(--gray);
 
       &:hover, &:focus {
         color: var(--moderate-cyan);
@@ -99,11 +98,15 @@ export default {
     }
 
     &__bookmark {
-      background-color: var(--gray);
-      border-radius: 99em;
+      color: var(--dark-gray);
+      font-size: calc(var(--fs-h4) - 0.4rem);
       text-decoration: none;
-      font-weight: 700;
-      font-size: calc(var(--fs-h4) - 0.2rem);
+      font-weight: 500;
+
+      background-color: var(--gray);
+      width: max-content;
+
+      border-radius: 99em;
 
       span {
         display: none;
@@ -113,24 +116,17 @@ export default {
         display: flex;
         align-items: center;
         column-gap: 0.5rem;
-        width: max-content;
         padding-right: var(--sm-spacer);
-        border-radius: 99em;
-        color: var(--dark-gray);
         span { display: block }
       }
 
       &:hover, &:hover {
         opacity: 0.7;
       }
+
       &--bookmarked {
-        border-radius: 50%;
         color: var(--moderate-cyan);
         background-color: var(--light-cyan);
-
-        @media (min-width: 50em) {
-          border-radius: 99em;
-        }
       }
     }
   }

@@ -16,7 +16,7 @@
       <p class="stat__text">days left</p>
     </div>
 
-    <div class="meter">
+    <div class="stats__meter">
       <Meter :value=getPercentage() />
     </div>
   </div>
@@ -52,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .stats {
   background-color: var(--white);
-  box-shadow: 0 0 10px 1px var(--gray);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   padding: var(--bg-spacer) var(--sm-spacer);
   margin-top: var(--bg-spacer);
@@ -62,12 +62,13 @@ export default {
     grid-template-areas: "backed backers days-left"
                          "progress progress progress"
   }
-}
-.meter {
-  padding-top: var(--bg-spacer);
-  width: 80%;
-  margin: 0 auto;
-  grid-area: progress;
+
+  &__meter {
+    padding-top: var(--bg-spacer);
+    width: 100%;
+    margin: 0 auto;
+    grid-area: progress;
+  }
 }
 
 .stat {
@@ -79,7 +80,7 @@ export default {
   }
 
   &__text {
-    font-size: calc(var(--fs-h4));
+    font-size: calc(var(--fs-h4) - 0.3rem);
   }
 }
 
@@ -89,7 +90,7 @@ export default {
 
   border-top: 1px solid var(--gray);
   padding-top: calc(var(--bg-spacer) / 1.2);
-  margin-top: calc(var(--bg-spacer) / 3);
+  margin-top: calc(var(--bg-spacer) / 1.2);
   @media (min-width: 50em) {
     border-top: unset;
     width: unset;

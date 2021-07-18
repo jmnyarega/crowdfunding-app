@@ -49,7 +49,7 @@ export default {
   z-index: 10;
 
   background-color: var(--white);
-  box-shadow: 0 0 15px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
   border-radius: var(--border-radius);
   text-align: initial;
 

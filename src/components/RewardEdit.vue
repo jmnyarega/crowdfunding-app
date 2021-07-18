@@ -107,8 +107,7 @@ export default {
 <style lang="scss">
 .reward-edit {
   background-color: var(--white);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
-              -3px -3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px 1px var(--gray);
   border-radius: var(--border-radius);
   border: 2px solid transparent;
   padding: var(--sm-spacer) var(--bg-spacer);
@@ -133,7 +132,6 @@ export default {
     font-size: var(--fs-h4);
     padding-bottom: calc(var(--sm-spacer) / 3);
     line-height: 1;
-    grid-area: b;
     color: initial;
     &:hover {
       color: var(--moderate-cyan);

@@ -12,7 +12,6 @@
     <div v-if="open" class="mobile-nav">
       <MobileNav />
     </div>
-
   </div>
 </template>
 
@@ -44,10 +43,10 @@ export default {
 .mobile-nav, .header__hamburger {
   position: initial;
   @media (min-width: 60em) {
-      opacity: 0;
-      position: absolute;
-      z-index: -1;
-    }
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .header {
@@ -61,7 +60,7 @@ export default {
     background-size: cover;
     background-position: center;
     background-color: var(--gray);
-    background-blend-mode: multiply;
+    background-blend-mode: darken;
     min-height: 24rem;
 
     @media (min-width: 60em) {

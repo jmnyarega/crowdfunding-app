@@ -14,12 +14,13 @@
         value="Back this project"
       />
       <a
-          href="#0"
+          href="#"
           class="cta__bookmark"
           @click="handleClick"
          :class="isBookmarked && 'cta__bookmark--bookmarked'"
         >
-        <img src="../assets/icon-bookmark.svg" alt="" />
+        <img src="../assets/icon-bookmark-checked.svg" alt="" v-if="isBookmarked" />
+        <img src="../assets/icon-bookmark.svg" alt="" v-if="!isBookmarked" />
         <span> {{ isBookmarked ? 'Bookmarked' : 'Bookmark' }} </span>
       </a>
     </div>
@@ -110,21 +111,11 @@ export default {
         opacity: 0.7;
       }
       &--bookmarked {
-        background-color: var(--moderate-cyan);
         border-radius: 50%;
+        color: var(--moderate-cyan);
 
-        span {
-          color: var(--dark-cyan);
-        }
-
-        img { mix-blend-mode: soft-light; }
         @media (min-width: 60em) {
-          background-color: var(--gray);
           border-radius: 99em;
-
-          img {
-            mix-blend-mode: initial;
-          }
         }
       }
     }

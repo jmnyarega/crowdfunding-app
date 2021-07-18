@@ -36,6 +36,7 @@
             placeholder="$"
             v-model="amount"
             step="any"
+            :min="reward.default"
             required
           />
         </div>
@@ -135,6 +136,9 @@ export default {
     line-height: 1;
     grid-area: b;
     color: initial;
+    &:hover {
+      color: var(--moderate-cyan);
+    }
   }
 
   &__sub-title {
@@ -142,20 +146,16 @@ export default {
     font-weight: 700;
   }
 
-  &__description {
-    color: var(--dark-gray);
-  }
-
   &__body {
     display: grid;
-    column-gap: 2rem;
+    column-gap: calc(var(--sm-spacer) * 2);
     margin-bottom: calc(var(--sm-spacer) * 2);
-    grid-template-columns: 0fr 1fr;
+    grid-template-columns: 0fr 1fr; // ??
     grid-template-areas: "input text"
                          "para para"
                         "left left";
 
-    @media (min-width: 50em) {
+    @media (min-width: 60em) {
       max-width: max-content;
       grid-template-areas: "input text left"
                            "input para para"
@@ -167,9 +167,9 @@ export default {
     .text {
       grid-area: text;
       margin-bottom: var(--sm-spacer);
-      @media (min-width: 50em) {
+      @media (min-width: 60em) {
         display: flex;
-        column-gap: 1rem;
+        column-gap: var(--sm-spacer);
         width: max-content;
       }
     }
@@ -179,7 +179,7 @@ export default {
     .reward-edit__left {
       grid-area: left;
       padding-top: calc(var(--sm-spacer) / 2);
-      @media (min-width: 50em) {
+      @media (min-width: 60em) {
         justify-self: flex-end;
         align-self: flex-start;
         padding-top: 0;

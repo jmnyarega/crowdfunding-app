@@ -27,7 +27,7 @@ export default new Vuex.Store({
                       As a backer, you will be signed up to receive product updates via email.`,
         left: Infinity,
         reward: false,
-        default: 0,
+        default: 1,
       },
       {
         id: 1,
@@ -48,7 +48,7 @@ export default new Vuex.Store({
             You’ll be added to our Backer member list. Shipping is included.  `,
         left: 20,
         reward: true,
-        default: 50,
+        default: 75,
       },
       {
         id: 3,

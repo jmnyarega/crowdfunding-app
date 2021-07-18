@@ -7,9 +7,11 @@
     <div class="reward-modal__text">
       Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
     </div>
-    <div v-for="reward in rewards" :key="reward.id">
-      <RewardEdit :reward="reward" />
-    </div>
+    <RewardEdit
+      :reward="reward"
+      v-for="reward in rewards"
+      :key="reward.id"
+    />
   </div>
 </template>
 
@@ -65,6 +67,10 @@ export default {
   img {
     cursor: pointer;
     margin-left: auto;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <main>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
@@ -10,7 +10,7 @@
       <Project />
       <RewardModal />
       <SuccessModal />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .body {
+  main {
     --moderate-cyan: hsl(176, 50%, 47%);
     --dark-cyan: hsl(176, 72%, 28%);
     --black: hsl(0, 0%, 0%);

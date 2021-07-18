@@ -1,13 +1,7 @@
 <template>
   <div class="project container" id="project">
     <About />
-    <div
-      class="rewards"
-      v-for="reward in rewards"
-      :key="reward.id"
-    >
-      <Reward :reward="reward" />
-    </div>
+    <Reward :reward="reward" v-for="reward in rewards" :key="reward.id" />
   </div>
 </template>
 

@@ -50,42 +50,44 @@ export default {
 </script>
 
 <style lang="scss">
+
+body {
+  --moderate-cyan: hsl(176, 50%, 47%);
+  --dark-cyan: hsl(176, 72%, 28%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 48%);
+  --white: hsl(0, 100%, 100%);
+  --gray: hsl(0, 0%, 90%);
+  --light-cyan: hsl(192, 29%, 97%);
+  --bg-gray: hsl(0, 0%, 98%);
+
+  --ff-default: 'Commissioner', sans-serif;
+  --fs-base: 0.9375rem;
+  --fs-h4: 1.2rem;
+  --fs-h3: 1.5rem;
+
+  --sm-spacer: 1rem;
+  --bg-spacer: 2.5rem;
+
+  --border-radius: 0.5rem;
+  --text-width: 75ch;
+  @media (min-width: 50em) {
+    --fs-base: 1.1rem;
+    --fs-h4: 1.5rem;
+    --fs-h3: 2rem;
+
+    --sm-spacer: 1.5rem;
+    --bg-spacer: 3rem;
+  }
+  background-color: var(--bg-gray);
+}
+
   main {
-    --moderate-cyan: hsl(176, 50%, 47%);
-    --dark-cyan: hsl(176, 72%, 28%);
-    --black: hsl(0, 0%, 0%);
-    --dark-gray: hsl(0, 0%, 48%);
-    --white: hsl(0, 100%, 100%);
-    --gray: hsl(0, 0%, 90%);
-    --light-cyan: hsl(192, 29%, 97%);
-    --bg-gray: hsl(0, 0%, 98%);
-
-    --ff-default: 'Commissioner', sans-serif;
-    --fs-base: 0.9375rem;
-    --fs-h4: 1.2rem;
-    --fs-h3: 1.5rem;
-
-    --sm-spacer: 1rem;
-    --bg-spacer: 2.5rem;
-
-    --border-radius: 0.5rem;
-    --text-width: 75ch;
-
     font-family: var(--ff-default);
     font-size: var(--fs-base);
-    background-color: var(--bg-gray);
     color: var(--dark-gray);
     text-align: center;
     min-height: 100vh;
-
-    @media (min-width: 50em) {
-      --fs-base: 1.1rem;
-      --fs-h4: 1.5rem;
-      --fs-h3: 2rem;
-
-      --sm-spacer: 1.5rem;
-      --bg-spacer: 3rem;
-    }
   }
 
   .overlay {

@@ -42,7 +42,7 @@ export default {
 <style lang="scss">
 .reward-modal {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 0;
   right: 0;
   padding: var(--bg-spacer);

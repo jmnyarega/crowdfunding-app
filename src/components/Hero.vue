@@ -62,10 +62,10 @@ export default {
                 var(--dark-gray);
     background-size: cover;
     background-blend-mode: multiply;
-    min-height: 24rem;
+    min-height: 15rem;
 
     @media (min-width: 50em) {
-      min-height: 30rem;
+      min-height: 20rem;
     }
   }
 

@@ -58,6 +58,7 @@ export default {
     --white: hsl(0, 100%, 100%);
     --gray: hsl(0, 0%, 90%);
     --light-cyan: hsl(192, 29%, 97%);
+    --bg-gray: hsl(0, 0%, 98%);
 
     --ff-default: 'Commissioner', sans-serif;
     --fs-base: 0.9375rem;
@@ -72,7 +73,7 @@ export default {
 
     font-family: var(--ff-default);
     font-size: var(--fs-base);
-    background-color: var(--gray);
+    background-color: var(--bg-gray);
     color: var(--dark-gray);
     text-align: center;
     min-height: 100vh;

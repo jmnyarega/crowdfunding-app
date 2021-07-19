@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss">
 .project {
-  margin-top: var(--bg-spacer);
+  margin-top: var(--sm-spacer);
   padding: var(--bg-spacer);
 
   background-color: var(--white);

@@ -53,7 +53,7 @@ export default {
   box-shadow: 0 0 3px 1px var(--gray);
   border-radius: var(--border-radius);
   padding: var(--sm-spacer) var(--bg-spacer);
-  margin-top: var(--bg-spacer);
+  margin-top: var(--sm-spacer);
 
   &--empty {
     opacity: 0.5;

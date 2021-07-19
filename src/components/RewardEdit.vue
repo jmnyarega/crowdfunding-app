@@ -111,7 +111,7 @@ export default {
   border-radius: var(--border-radius);
   border: 2px solid transparent;
   padding: var(--sm-spacer) var(--bg-spacer);
-  margin-top: var(--bg-spacer);
+  margin-top: var(--sm-spacer);
   cursor: pointer;
 
   &--selected {

@@ -22,7 +22,7 @@
   &__title {
     font-size: var(--fs-h3);
     line-height: 1;
-    padding-bottom: var(--bg-spacer);
+    padding-bottom: var(--sm-spacer);
     color: initial;
   }
 

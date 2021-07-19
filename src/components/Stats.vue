@@ -55,7 +55,7 @@ export default {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   padding: var(--bg-spacer) var(--sm-spacer);
-  margin-top: var(--bg-spacer);
+  margin-top: var(--sm-spacer);
   max-width: var(--text-width);
   @media (min-width: 50em) {
     display: grid;
@@ -88,7 +88,7 @@ export default {
   width: max-content;
   margin: 0 auto;
 
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--dark-gray);
   padding-top: calc(var(--bg-spacer) / 1.2);
   margin-top: calc(var(--bg-spacer) / 1.2);
   @media (min-width: 50em) {
@@ -96,7 +96,7 @@ export default {
     width: unset;
     margin: unset;
 
-    border-left: 1px solid var(--gray);
+    border-left: 1px solid var(--dark-gray);
     padding: 0 1rem;
   }
 }

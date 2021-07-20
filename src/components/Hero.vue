@@ -66,6 +66,10 @@ export default {
 
     @media (min-width: 50em) {
       min-height: 20rem;
+    background: no-repeat
+                url(../assets/image-hero-desktop.jpg)
+                center
+                var(--dark-gray);
     }
   }
 

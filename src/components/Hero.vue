@@ -58,18 +58,17 @@ export default {
   &--bg {
     background: no-repeat
                 url(../assets/image-hero-mobile.jpg)
-                center
                 var(--dark-gray);
     background-size: cover;
     background-blend-mode: multiply;
-    min-height: 15rem;
+    min-height: 20rem;
 
     @media (min-width: 50em) {
-      min-height: 20rem;
-    background: no-repeat
-                url(../assets/image-hero-desktop.jpg)
-                center
-                var(--dark-gray);
+      min-height: 25rem;
+      background: no-repeat
+                  url(../assets/image-hero-desktop.jpg)
+                  center
+                  var(--dark-gray);
     }
   }
 

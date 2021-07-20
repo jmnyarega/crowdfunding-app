@@ -57,7 +57,7 @@ export default {
 
   &--bg {
     background-image: url(../assets/image-hero-mobile.jpg);
-    background: no-repeat center rgba(0, 0, 0, 0.2);
+    background: no-repeat center rgba(0, 0, 0, 0.15);
     background-size: cover;
     background-blend-mode: multiply;
     min-height: 20rem;

@@ -58,6 +58,7 @@ export default {
   &--bg {
     background: no-repeat
                 url(../assets/image-hero-mobile.jpg)
+                center
                 var(--dark-gray);
     background-size: cover;
     background-blend-mode: multiply;
@@ -69,6 +70,7 @@ export default {
                   url(../assets/image-hero-desktop.jpg)
                   center
                   var(--dark-gray);
+      background-size: cover;
     }
   }
 

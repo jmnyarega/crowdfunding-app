@@ -53,7 +53,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: var(--sm-spacer);
+  padding-top: var(--bg-spacer);
 
   &--bg {
     background-image: url(../assets/image-hero-mobile.jpg);

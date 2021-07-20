@@ -56,7 +56,7 @@ export default {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: var(--border-radius);
   padding: var(--bg-spacer) var(--sm-spacer);
-  margin-top: -4rem;
+  margin-top: -5rem;
   max-width: var(--text-width);
   position: relative;
 

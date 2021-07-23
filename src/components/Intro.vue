@@ -1,9 +1,7 @@
 <template>
   <div class="intro container" id="top">
     <img class="intro__logo" src="../assets/logo-mastercraft.svg" alt="">
-    <h3 class="intro__title">
-      Mastercraft Bamboo Monitor Riser
-    </h3>
+    <h3 class="intro__title"> Mastercraft Bamboo Monitor Riser </h3>
     <p class="intro__para">
       A beautiful & handcrafted monitor stand to reduce neck and eye strain.
     </p>
@@ -16,13 +14,14 @@
       <a
           href=""
           class="cta__bookmark"
-          @click="handleClick"
-         :class="isBookmarked && 'cta__bookmark--bookmarked'"
+          :class="{'cta__bookmark--bookmarked': isBookmarked }"
+          @click.prevent="handleClick"
         >
         <img src="../assets/icon-bookmark-checked.svg" alt="" v-if="isBookmarked" />
-        <img src="../assets/icon-bookmark.svg" alt="" v-if="!isBookmarked" />
+        <img src="../assets/icon-bookmark.svg" alt="" v-else/>
+
         <span v-if="isBookmarked"> Bookmarked </span>
-        <span v-if="!isBookmarked"> Bookmark </span>
+        <span v-else> Bookmark </span>
       </a>
     </div>
   </div>
@@ -40,10 +39,7 @@ export default {
     isBookmarked() { return this.getBookmarked(); },
   },
   methods: {
-    handleClick(evt) {
-      evt.preventDefault();
-      this.setBookmark();
-    },
+    handleClick() { this.setBookmark(); },
     ...mapGetters(['getBookmarked']),
     ...mapActions(['setBookmark']),
   },

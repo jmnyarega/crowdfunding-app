@@ -1,5 +1,5 @@
 <template>
-  <div class="reward" :class="reward.left == 0 && 'reward--empty'">
+  <div class="reward" :class="{'reward--empty': reward.left == 0}">
     <div class="reward__header">
       <h3 class="reward__title">{{reward.title}}</h3>
       <p class="reward__sub-title">{{reward.text}}</p>
@@ -13,7 +13,7 @@
         <Button
           :value="reward.left > 0 ? 'Select Reward' : 'Out of stock'"
           :click="handleClick"
-          :clas="reward.left == 0 ? 'button--empty' : ''"
+          :className="{'button--empty': reward.left == 0}"
           :disabled="reward.left == 0"
         />
       </div>

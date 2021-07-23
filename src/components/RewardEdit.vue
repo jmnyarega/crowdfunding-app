@@ -18,7 +18,7 @@
 
       <p class="reward-edit__description">{{reward.description}}</p>
 
-      <div class="reward-edit__left"  v-if="reward.reward">
+      <div class="reward-edit__left"  v-show="reward.reward">
         <span class="left">{{reward.left}}</span> left
       </div>
 
@@ -26,7 +26,7 @@
     <!--------------->
 
     <!--------------->
-    <div class="pledge" v-if="selected == reward.id">
+    <div class="pledge" v-show="selected == reward.id">
       <h3>Enter Your pledge</h3>
 
       <form @submit="handleSubmit">
@@ -34,7 +34,7 @@
           <input
             type="number"
             placeholder="$"
-            v-model="amount"
+            v-model.number="amount"
             step="any"
             :min="reward.default"
             required

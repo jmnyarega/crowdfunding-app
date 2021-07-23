@@ -2,17 +2,17 @@
   <div class="stats container">
 
     <div class="stat">
-      <h3 class="stat__title">${{format(stats.backed)}}</h3>
-      <p class="stat__text">of ${{format(stats.target)}} backed</p>
+      <h3 class="stat__title">${{backed}}</h3>
+      <p class="stat__text">of ${{target}} backed</p>
     </div>
 
     <div class="stat">
-      <h3 class="stat__title">{{format(stats.backers)}}</h3>
+      <h3 class="stat__title">{{backers}}</h3>
       <p class="stat__text">total backers</p>
     </div>
 
     <div class="stat">
-      <h3 class="stat__title">{{format(stats.daysLeft)}}</h3>
+      <h3 class="stat__title">{{daysLeft}}</h3>
       <p class="stat__text">days left</p>
     </div>
 
@@ -35,6 +35,10 @@ export default {
     stats() {
       return this.getStats();
     },
+    backed() { return this.format(this.stats.backed); },
+    backers() { return this.format(this.stats.backers); },
+    daysLeft() { return this.format(this.stats.daysLeft); },
+    target() { return this.format(this.stats.target); },
   },
   methods: {
     ...mapGetters(['getStats']),

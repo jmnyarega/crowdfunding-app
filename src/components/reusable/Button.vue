@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="link-button" v-if="type === 'link'">
+    <div class="link-button" v-show="type === 'link'">
         <a :href="href" class="button">{{value}}</a>
     </div>
 
-    <div class="normal-button" v-if="type !== 'link'">
+    <div class="normal-button" v-show="type !== 'link'">
       <button
         class="button"
-        :class="clas"
+        :class="className"
         :disabled="disabled"
         :type="type"
         @click="click"
@@ -25,9 +25,13 @@ export default {
     value: String,
     href: String,
     type: String,
-    clas: String,
+    className: Object,
     disabled: Boolean,
-    click: Function,
+    click: {
+      type: Function,
+      required: false,
+      default: () => {},
+    },
   },
 };
 </script>
@@ -36,7 +40,7 @@ export default {
 .button {
   text-decoration: none;
   color: var(--white);
-  font-weight: 500;
+  font-weight: var(--fw-bold);
 
   padding: 0.8em 1.6em;
   border-radius: 99em;

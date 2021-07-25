@@ -7,21 +7,23 @@
     <div class="reward-modal__text">
       Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?
     </div>
-    <RewardEdit :reward="reward" v-for="reward in rewards" :key="reward.id" />
+    <rewardedit :reward="reward" v-for="reward of rewards" :key="reward.id" />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import RewardEdit from './RewardEdit.vue';
+import rewardedit from './RewardEdit.vue';
 
 export default {
   components: {
-    RewardEdit,
+    rewardedit,
   },
   computed: {
-    rewards() {
-      return this.getRewards();
+    rewards: {
+      get() {
+        return this.getRewards();
+      },
     },
     show() {
       return this.showRewardModal();

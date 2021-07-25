@@ -1,23 +1,25 @@
 <template>
   <div class="project container" id="project">
-    <About />
-    <Reward :reward="reward" v-for="reward in rewards" :key="reward.id" />
+    <about />
+    <reward :reward="reward" v-for="reward of rewards" :key="reward.id" />
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import About from './About.vue';
-import Reward from './Reward.vue';
+import about from './About.vue';
+import reward from './Reward.vue';
 
 export default {
   components: {
-    About,
-    Reward,
+    about,
+    reward,
   },
   computed: {
-    rewards() {
-      return this.getRewards().slice(1);
+    rewards: {
+      get() {
+        return this.getRewards().slice(1);
+      },
     },
   },
   methods: {

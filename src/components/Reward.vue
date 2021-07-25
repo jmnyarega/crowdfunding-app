@@ -10,7 +10,7 @@
         <span class="left">{{reward.left}}</span> left
       </div>
       <div class="reward__select">
-        <Button
+        <cbutton
           :value="reward.left > 0 ? 'Select Reward' : 'Out of stock'"
           :click="handleClick"
           :className="{'button--empty': reward.left == 0}"
@@ -23,14 +23,14 @@
 
 <script>
 import { mapActions } from 'vuex';
-import Button from './reusable/Button.vue';
+import cbutton from './reusable/Button.vue';
 
 export default {
   props: {
     reward: Object,
   },
   components: {
-    Button,
+    cbutton,
   },
   methods: {
     handleClick() {

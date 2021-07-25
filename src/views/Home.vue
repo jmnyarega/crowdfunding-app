@@ -3,36 +3,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
-    <div :class="show && 'overlay'" />
-    <Hero />
-    <Intro />
-    <Stats />
-    <Project />
-    <RewardModal />
-    <SuccessModal />
+    <div :class="{'overlay': show}" />
+    <hero />
+    <intro />
+    <stats />
+    <project />
+    <reward />
+    <success />
   </main>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 
-import Hero from '@/components/Hero.vue';
-import Intro from '@/components/Intro.vue';
-import Stats from '../components/Stats.vue';
-import Project from '../components/Project.vue';
-import RewardModal from '../components/RewardModal.vue';
-import SuccessModal from '../components/reusable/SuccessModal.vue';
+import hero from '@/components/Hero.vue';
+import intro from '@/components/Intro.vue';
+import stats from '../components/Stats.vue';
+import project from '../components/Project.vue';
+import reward from '../components/RewardModal.vue';
+import success from '../components/reusable/SuccessModal.vue';
 
 import '../css/index.css';
 
 export default {
   components: {
-    Hero,
-    Intro,
-    Stats,
-    Project,
-    RewardModal,
-    SuccessModal,
+    hero,
+    intro,
+    stats,
+    project,
+    reward,
+    success,
   },
   computed: {
     show() {

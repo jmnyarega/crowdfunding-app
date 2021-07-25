@@ -56,15 +56,15 @@ export default {
   padding-top: var(--bg-spacer);
 
   &--bg {
-    background-image: url(../assets/image-hero-mobile.jpg);
     background: no-repeat center rgba(0, 0, 0, 0.15);
     background-size: cover;
     background-blend-mode: multiply;
+    background-image: url(../assets/image-hero-mobile.jpg);
     min-height: 20rem;
 
     @media (min-width: 50em) {
-      min-height: 25rem;
       background-image: url(../assets/image-hero-desktop.jpg);
+      min-height: 25rem;
     }
   }
 
